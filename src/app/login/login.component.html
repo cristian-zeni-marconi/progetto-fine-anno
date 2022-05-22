@@ -1,0 +1,35 @@
+<span *ngIf="pas; else alternativa">
+  <section class="d-flex flex-column align-items-center">
+    <h1 class="titolo text-danger">Dungeons & Dragons</h1>
+    <section>
+
+      <a routerLink="/classi" class="btn btn-outline-dark">Classes</a>
+      <a routerLink="/caratteristiche" class="btn btn-outline-dark">Characteristics</a>
+      <a routerLink="/incantesimi" class="btn btn-outline-dark">Spells</a>
+
+    </section>
+  </section>
+
+  <body>
+    <router-outlet></router-outlet>
+  </body>
+
+</span>
+
+
+<ng-template #alternativa>
+
+  <div class="login">
+    <section class="d-flex flex-column align-items-center">
+      <h2 class="titolo">Inserisci Credenziali</h2>
+
+      <p>Username</p>
+      <input type="text" [(ngModel)]="username" class="input-group-text" placeholder="Username" id="inputGroup-sizing-lg"><br><br>
+
+      <p>Password</p>
+      <input type="password" [(ngModel)]="password" class="input-group-text" placeholder="Password" id="inputGroup-sizing-lg"><br><br>
+
+      <button (click)="controllo()" type="button" class={{stile}}>Accedi</button>
+    </section>
+  </div>
+</ng-template>

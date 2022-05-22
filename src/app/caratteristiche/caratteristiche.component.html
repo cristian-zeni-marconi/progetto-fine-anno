@@ -1,0 +1,12 @@
+<h2 class="titolo">Choose the class to see the characteristics</h2>
+
+<section class = "corpo">
+  <section class = "bottoni">
+    <div *ngFor = "let id of lista; index as i">
+      <button (click) = "richiama(lista[i].tipo[i])" class="ombra btn btn-outline-success">{{lista[i].tipo[i]}}</button><br>
+    </div>    
+  </section>
+
+  <app-singole-caratteristiche [classe]="id" [nome]="name" [pass]="passaggio" [dati]="roba"></app-singole-caratteristiche>
+
+</section>

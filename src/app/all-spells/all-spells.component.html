@@ -1,0 +1,16 @@
+<span *ngIf="pass">
+  <h2 class="titolo">{{nome}} spells</h2>
+  <section>  
+    <ul>
+      <div *ngFor="let j of dati.results; index as i">
+        <li (click)="chiamata(dati.results[i].index)" class="btn btn-outline-light text-dark larghezza">
+          {{dati.results[i].name}}
+        </li>
+      </div>
+    </ul>
+
+    <div>
+      <app-single-spells [incantesimo]="risul" [ctr]="passV"></app-single-spells>
+    </div>
+  </section>
+<span>

@@ -1,0 +1,26 @@
+h2{
+  text-shadow: 2px 2px 10px cyan;
+}
+
+li{
+  font-size: x-large;
+  text-shadow: 1px 1px 5px grey;
+}
+
+section{
+  display: flex;
+  gap: 20px;
+}
+
+div{
+  width: 100%;
+}
+
+.larghezza{
+  width: 100%;
+}
+
+.titolo{
+  font-family: 'Macondo', cursive;
+  font-size: 5rem;
+}

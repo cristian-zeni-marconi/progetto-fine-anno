@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=MedievalSharp&display=swap');
+
+.titolo{
+  margin-top: 15px;
+  font-size: 3rem;
+  font-family: 'Macondo', cursive;
+  text-shadow: 2px 2px 10px black;
+}
+
+section{
+  display: flex;
+  gap: 1rem;
+}
+
+p{
+  font-size: xx-large;
+  font-family: 'MedievalSharp', 'cursive';
+  text-shadow: 3px 3px 5px rgb(0, 105, 91);
+}

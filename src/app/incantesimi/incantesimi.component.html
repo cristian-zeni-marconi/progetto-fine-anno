@@ -1,0 +1,17 @@
+<h2 class="titolo">Choose the class to see the spells</h2>
+
+<section class = "corpo">
+<section class = "bottoni">
+  <div>
+    <button (click) = "richiama('cleric')" class={{stile}}>Cleric</button><br>
+      <button (click) = "richiama('bard')" class={{stile}}>Bard</button><br>
+      <button (click) = "richiama('druid')" class={{stile}}>Druid</button><br>
+      <button (click) = "richiama('paladin')" class={{stile}}>Paladin</button><br>
+      <button (click) = "richiama('ranger')" class={{stile}}>Ranger</button><br>
+      <button (click) = "richiama('sorcerer')" class={{stile}}>Sorcerer</button><br>
+      <button (click) = "richiama('warlock')" class={{stile}}>Warlock</button><br>
+      <button (click) = "richiama('wizard')" class={{stile}}>Wizard</button><br>
+  </div>    
+</section>
+  <app-all-spells [classe]="id" [nome]="name" [pass]="passaggio" [dati]="roba" [passV]="permesso"></app-all-spells>
+</section>

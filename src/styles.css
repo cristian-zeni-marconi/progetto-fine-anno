@@ -1,0 +1,15 @@
+/* Add application styles & imports to this file! */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=MedievalSharp&display=swap');
+
+body{
+  background-image: url("https://raw.githubusercontent.com/cristian-zeni-marconi/Immagini/main/sfondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100hv;
+}
+
+*{
+  font-family: 'MedievalSharp', 'cursive';
+}

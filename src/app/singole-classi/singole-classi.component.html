@@ -1,0 +1,113 @@
+<span *ngIf = "pass == true">
+  <h2 class="titolo">{{ classe }}</h2>
+
+  <div>
+    <section (click)="debug()">
+    <table class="table table-dark">
+      <thead>
+        <tr class="table-active">
+          <td>
+            Level
+          </td>
+          <td>
+            Proficiencies Bonus
+          </td>
+          <td>
+            ability bonuses
+          </td>
+
+          <ng-container *ngIf="nome == 'sorcerer';else intestazione">
+            <td>
+              {{variabili[0]}}  
+            </td>
+
+            <td>
+              {{variabili[1]}}
+            </td>
+          </ng-container>
+
+          <ng-template #intestazione>
+            <td *ngFor="let j of variabili; index as i">
+              {{variabili[i]}}
+            </td>
+          </ng-template>
+
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let j of dati; index as i">
+          <td>
+            {{dati[i].level}}
+          </td>
+
+          <td>
+            +{{dati[i].prof_bonus}}
+          </td>
+
+          <td>
+            +{{dati[i].ability_score_bonuses}}
+          </td>
+          
+          <ng-container *ngIf="nome == 'monk';else else1">
+            <td>
+              {{dati[i].class_specific.martial_arts.dice_count}}, {{dati[i].class_specific.martial_arts.dice_value}}
+            </td>
+
+            <td>
+              {{dati[i].class_specific.ki_points}}
+            </td>
+
+            <td>
+              {{dati[i].class_specific.unarmored_movement}}
+            </td>
+          </ng-container>
+
+          <ng-template #else1>
+            <ng-container *ngIf="nome == 'rogue';else else2">
+              <td>
+                Dice Count: {{dati[i].class_specific.sneak_attack.dice_count}},
+                Dice Value: {{dati[i].class_specific.sneak_attack.dice_value}}
+              </td>
+            </ng-container>
+
+            <ng-template #else2>
+
+              <ng-container *ngIf="nome == 'sorcerer';else else3">
+                <td>
+                  {{dati[i].class_specific[variabili[0]]}}
+                </td>
+                
+                <td>
+                  {{dati[i].class_specific[variabili[1]]}}
+                </td>
+              </ng-container>
+
+              <ng-template #else3>
+
+                <td *ngFor="let h of variabili; index as l">
+                  {{dati[i].class_specific[variabili[l]]}}
+                </td>  
+
+              </ng-template>
+            </ng-template>
+          </ng-template>
+
+          <!--<td>
+            {{dati[i].class_specific[variabili[0]]}},{{dati[i].class_specific[variabili[1]]}}, {{dati[i].class_specific[variabili[2]]}}
+            <section *ngFor = "let h of variabili; index as l" >
+              {{dati[i].class_specific[(Object.keys(dati[i].class_specific[l]))]} 
+              
+            </section>
+          </td>-->
+            
+
+        </tr>
+
+      </tbody>
+    </table>
+    </section>
+
+    <img src="https://raw.githubusercontent.com/cristian-zeni-marconi/Immagini/main/{{nome}}.png">
+  </div>
+</span>

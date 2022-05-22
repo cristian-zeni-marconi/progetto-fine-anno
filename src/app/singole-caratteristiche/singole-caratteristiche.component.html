@@ -1,0 +1,85 @@
+<span *ngIf = "pass == true">
+  <h2 class="titolo ">{{ classe }}</h2>
+  
+  <div>
+    <table class="table table-dark">
+      <thead>
+        <tr class="table-active">
+          <td>
+            Name
+          </td>
+
+          <td>
+            Characteristic
+          </td>
+        </tr>
+      </thead>
+      <tbody>       
+
+        <tr>
+          <td>
+            Saving Throws
+          </td>
+          
+          <td>
+            <li *ngFor="let j of dati.saving_throws; index as i" >
+            {{dati.saving_throws[i].name}}
+            </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+          Starting Equipment
+          </td>
+        
+          <td>
+            <li *ngFor="let j of dati.starting_equipment; index as i" >
+            {{dati.starting_equipment[i].equipment.name}}: {{dati.starting_equipment[i].quantity}}
+            </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Proficiencies
+          </td>
+        
+          <td>
+            <li *ngFor="let j of dati.proficiencies; index as i" >
+            {{dati.proficiencies[i].name}}
+            </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Proficiencies Choices
+          </td>
+        
+          <td>
+            choose {{dati.proficiency_choices[0].choose}}:
+            <li *ngFor="let j of dati.proficiency_choices[0].from; index as i" >
+              {{dati.proficiency_choices[0].from[i].name}}
+            </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Subclasses
+          </td>
+        
+          <td>
+            <section *ngFor="let j of dati.subclasses; index as i" >
+              {{dati.subclasses[i].name}}
+            </section>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <img src="https://raw.githubusercontent.com/cristian-zeni-marconi/Immagini/main/{{nome}}.png">
+  </div>
+</span>

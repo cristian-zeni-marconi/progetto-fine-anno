@@ -1,0 +1,94 @@
+<span *ngIf="ctr">
+  <div>
+    <h2 class="titolo">{{incantesimo.name}}</h2>
+    <section>
+      <table class="table table-dark">
+        <thead>
+          <tr class="table-active">
+            <td>
+              Name
+            </td>
+
+            <td>
+              Characteristic
+            </td>
+          </tr>
+        </thead>
+        <tbody>       
+
+          <tr>
+            <td>
+              Level
+            </td>
+            
+            <td>
+              {{incantesimo.level}}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Range
+            </td>
+            
+            <td>
+              {{incantesimo.range}}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Components
+            </td>
+          
+            <td>
+              <li *ngFor="let j of incantesimo.components; index as i">
+                {{incantesimo.components[i]}}  
+              </li>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Ritual
+            </td>
+          
+            <td>
+              {{incantesimo.ritual}}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              Concentration
+            </td>
+          
+            <td>
+              {{incantesimo.concentration}}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              School
+            </td>
+        
+            <td>
+              {{incantesimo.school.name}}
+            </td>
+          </tr> 
+
+        </tbody>
+      </table>
+
+      <h3>Description: 
+        <div *ngFor="let j of incantesimo.desc; index as i">
+          {{incantesimo.desc[i]}}
+        </div>
+      </h3>
+
+    </section>
+  </div>
+
+
+</span>
